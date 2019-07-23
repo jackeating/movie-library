@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ director.last_name }}{{ director.first_name }}</h1>
+
+  <p><strong>last_name:</strong> <a href="">{{ director.last_name }}</a></p> <!-- director detail link not yet defined -->
+  <p><strong>last_name:</strong> <a href="">{{ director.first_name }}</a></p> <!-- director detail link not yet defined -->
+  <p><strong>last_name:</strong> <a href="">{{ director.date_of_birth }}</a></p>
+  <p><strong>date_of_death:</strong> <a href="">{{ director.date_of_death }}</a></p>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Movie Library</h1>
+  <p>Welcome to Movie, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The movie has the following record counts:</p>
+  <ul>
+    <li><strong>Movies:</strong> {{ num_movies }}</li>
+    <li><strong>Directors:</strong> {{ num_directors }}</li>
+    <li><strong>Actors:</strong> {{ num_actors }}</li>
+  </ul>
+
+  <p>訪問回数 {{ num_visits }}回.</p>
+{% endblock %}
