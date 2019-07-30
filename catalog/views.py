@@ -6,15 +6,13 @@ from django.urls import reverse_lazy
 from catalog.models import Director
 
 
-# Create your views here.
 from catalog.models import Genre, Actor, Movie, Director
 
 def index(request):
 
-    # Generate counts of some of the main objects
+    
     num_movies = Movie.objects.all().count()
 
-    # The 'all()' is implied by default.
     num_directors = Director.objects.count()
     num_actors = Actor.objects.count()
 
@@ -28,7 +26,6 @@ def index(request):
         'num_visits': num_visits,
     }
 
-    # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
 
 class MovieListView(generic.ListView):
